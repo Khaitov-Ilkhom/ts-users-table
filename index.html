@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Type script Class</title>
+</head>
+<body class="w-screen h-screen bg-slate-300 flex justify-center items-center">
+
+<div class="w-full flex justify-center flex-col md:flex-row items-center md:items-start gap-8 p-4">
+  <form id="form"
+        class="w-full md:w-[400px] bg-white shadow-lg rounded-xl flex justify-center items-center flex-col gap-4 py-6 px-4"
+        action="">
+    <div class="text-xl font-semibold text-gray-700">Enrollment Users</div>
+    <input required id="input-name"
+           class="w-[80%] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+           type="text" placeholder="Enter your firstname">
+    <input required id="input-age"
+           class="w-[80%] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+           type="number" min="0" placeholder="Enter your age">
+    <input required id="input-address"
+           class="w-[80%] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+           type="text" placeholder="Enter your address">
+    <button id="btn" type="submit"
+            class="bg-slate-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-slate-600 transition">
+      Send
+    </button>
+  </form>
+  <div class="w-full md:w-[600px] overflow-x-auto">
+    <table class="min-w-full bg-white shadow-lg rounded-xl overflow-hidden">
+      <thead>
+      <tr class="bg-slate-500 text-white">
+        <th class="py-3 px-4 text-left">Name</th>
+        <th class="py-3 px-4 text-left">Age</th>
+        <th class="py-3 px-4 text-left">Address</th>
+        <th class="py-3 px-4 text-left">Action</th>
+      </tr>
+      </thead>
+      <tbody id="table">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<script src="./src/index.js"></script>
+</body>
+</html>
