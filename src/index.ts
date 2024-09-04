@@ -1,10 +1,8 @@
 const form = document.querySelector("#form") as HTMLFormElement
 const table = document.querySelector("#table") as HTMLTableElement
-
 const inputName = document.querySelector("#input-name") as HTMLInputElement
 const inputAge = document.querySelector("#input-age") as HTMLInputElement
 const inputAddress = document.querySelector("#input-address") as HTMLInputElement
-
 
 interface IUser {
   name: string;
@@ -41,7 +39,6 @@ class Users {
           <button class="bg-red-500 text-white font-semibold rounded-lg px-3 py-1 hover:bg-red-600 transition">Delete user</button>
         </td>
       `;
-
       const deleteButton = tr.querySelector("button");
       deleteButton?.addEventListener("click", () => {
         this.deleteUser(user.id);
